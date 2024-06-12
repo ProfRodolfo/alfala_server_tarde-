@@ -1,10 +1,13 @@
 # Criando primeiro projeto em Node.js com ES6
 
 ## Criando a pasta e acessando pelo Visual Studio Code
-01) Criar uma pasta chamada **alfala-books**, ou outro nome que achar conveniente para seu projeto.
+01) Criar uma pasta chamada **alfala-server**, ou outro nome que achar conveniente para seu projeto.
 
 ## Criando a aplicação pelo terminal
 02) Quando o terminal aparecer na parte inferior da sua IDE, escreva nele o comando: 
+
+Este comando servirá para iniciarmos o arquivo package.json com as definições do projeto!
+
 ```bash
 npm init.
 ```
