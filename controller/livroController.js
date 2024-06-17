@@ -1,5 +1,5 @@
 
-import { getTodosLivros, getLivroPorId, insereLivro, modificaLivro } from '../service/livroService.js'
+import { getTodosLivros, getLivroPorId, insereLivro, modificaLivro, deletaLivroPorId } from '../service/livroService.js'
 
 export const getLivros = (req, res) => {
     try {
@@ -47,6 +47,17 @@ export const patchLivro = (req, res) =>{
         modificaLivro(body, id)
         res.send("Livro modificado com sucesso.")
         
+    } catch (error) {
+        res.status(500)
+        res.send(error.message)
+    }
+}
+
+export const deletaLivro = (req, res) =>{
+    try {
+        const id = req.params.id
+        deletaLivroPorId(id)
+        res.send("Livro deletado com sucesso!")
     } catch (error) {
         res.status(500)
         res.send(error.message)
