@@ -1,15 +1,20 @@
-import { getLivros } from '../controller/livroController.js';
+import { getLivros, getLivro } from '../controller/livroController.js';
 import {Router} from 'express'
 
 const router = Router(); 
 
-// GET - Retornar livros 
+
 router.get('/', getLivros)
-// POST - Criar um livro
+
+
+router.get('/:id', getLivro)
+
+
 router.post('/', (req, res) =>{
     res.send('Estou na rota post')
 });
-// PATCH - Atualizar um livro 
+
+
 router.patch('/', (req, res) =>{
     res.send('Estou na rota patch')
 });
